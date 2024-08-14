@@ -13,8 +13,10 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="ProfileImage"/>
+		<item key="selection" value="oracle"/>
 		<list key="findhistory">
+			<item value="oracle"/>
+			<item value="myb"/>
 			<item value="profileImage"/>
 		</list>
 		<list key="replacehistory">

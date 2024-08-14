@@ -1,9 +1,0 @@
-spring.application.name=SpringMVC
-
-# 서버의 포트번호 변경하기
-server.port=9090
-
-# Logback 설정하기
-
-# 파일 로그가 저장될 경로 설정
-logging.file.name=logs/mylog.log

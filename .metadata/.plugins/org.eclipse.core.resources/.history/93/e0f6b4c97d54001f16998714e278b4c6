@@ -1,8 +1,0 @@
-package com.ezen.springmvc.dto;
-
-import org.springframework.stereotype.Component;
-
-@Component
-public class Cook2 extends Cook{
-
-}

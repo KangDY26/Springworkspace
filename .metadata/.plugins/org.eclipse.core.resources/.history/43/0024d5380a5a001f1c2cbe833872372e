@@ -1,9 +1,0 @@
-
-const btn = document.getElementById("btn");
-const out = document.getElementById("out");
-
-btn.addEventListener("click", (e) => {
-	
-	
-	out.innerText ="바뀜";
-});
