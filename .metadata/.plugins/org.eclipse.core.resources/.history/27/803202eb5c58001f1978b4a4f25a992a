@@ -1,0 +1,5 @@
+
+const saleButtonHandler = (e) => {
+	console.dir(e);
+	console.dir(e.target);
+};

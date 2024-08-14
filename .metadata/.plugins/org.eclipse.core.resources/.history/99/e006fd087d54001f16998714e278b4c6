@@ -1,0 +1,22 @@
+package com.ezen.springmvc.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.ezen.springmvc.dto.Cook;
+
+
+@RequestMapping("/component")
+@Controller
+public class ComponentScanController {
+
+	Cook cook = new Cook2();
+	
+	@GetMapping("/test1")
+	public String test1() {
+		System.out.println("cook: " +cook);
+		
+		return "index";
+	}
+}

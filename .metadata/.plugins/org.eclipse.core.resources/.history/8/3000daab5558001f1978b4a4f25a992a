@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>과일 발주 목록</title>
+	<link rel="stylesheet" href="/" />
+</head>
+<body>
+
+	<h3>과일 발주 목록</h3>
+	
+	<div th:each="fruitOrder: ${fruitOrders}">
+		<div>[[${fruitOrder}]]</div>
+		<div></div>
+		<div></div>
+	</div>
+	
+</body>
+</html>

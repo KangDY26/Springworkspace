@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>HOME</title>
+</head>
+<body>
+
+	<h3>홈</h3>
+	
+	<button>xhttp요청 보내기</button>
+	
+	<div id="out"></div>
+	
+	<script src="/assets/js/home.js"></script>
+	
+</body>
+</html>

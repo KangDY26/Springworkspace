@@ -1,0 +1,23 @@
+package com.ezen.springmvc.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.ezen.springmvc.stu.Car;
+
+@Controller
+public class CarController {
+	
+	@Autowired
+	Car car;
+
+	@GetMapping("/study")
+	public String study() {
+		car.setCar_name("모닝");
+		car.setCar_price(1000);
+		
+		System.out.println(car);
+		return "index";
+	}
+}

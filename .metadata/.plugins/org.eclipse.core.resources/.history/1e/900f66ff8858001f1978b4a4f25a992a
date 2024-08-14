@@ -1,0 +1,14 @@
+package com.ezen.springdata.dto;
+
+
+import java.util.Date;
+
+import lombok.Data;
+
+@Data
+public class FruitSalesHistoryDTO {
+	private Integer fhid;
+	private Integer fid;
+	private Integer qty;
+	private Date purchase_time;
+}

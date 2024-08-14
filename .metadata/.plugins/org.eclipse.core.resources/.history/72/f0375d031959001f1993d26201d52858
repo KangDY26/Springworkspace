@@ -1,0 +1,19 @@
+package com.ezen.springdata.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import jakarta.servlet.http.HttpServletRequest;
+
+@Controller
+public class SessionTestController {
+
+	@GetMapping("/session/test1")
+	public String test1(
+				HttpServletRequest request
+			) {
+		
+		
+		return "/session/index";
+	}
+}

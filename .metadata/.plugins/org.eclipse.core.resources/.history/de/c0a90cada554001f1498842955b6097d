@@ -1,0 +1,7 @@
+package com.ezen.springmvc.stu;
+
+public class Car {
+
+	private String car_name;
+	private Integer car_price;
+}

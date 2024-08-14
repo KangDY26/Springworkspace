@@ -1,0 +1,18 @@
+package com.ezen.springmvc.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.ezen.springmvc.dto.CoffeeDTO;
+
+@Controller
+public class HomeController {
+
+	@GetMapping("/home")
+	public String index() {
+		CoffeeDTO coffeeDto = new CoffeeDTO();
+		
+		return "index";
+	}
+	
+}

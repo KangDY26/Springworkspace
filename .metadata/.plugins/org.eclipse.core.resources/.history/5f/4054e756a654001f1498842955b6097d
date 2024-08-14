@@ -1,0 +1,19 @@
+package com.ezen.springmvc.controller;
+
+import org.springframework.stereotype.Controller;
+
+import com.ezen.springmvc.stu.Car;
+
+@Controller
+public class CarController {
+
+	
+	Car car;
+	
+	public String stude() {
+		System.out.println("car");
+		
+		return null;
+	}
+	
+}

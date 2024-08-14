@@ -1,0 +1,5 @@
+spring.application.name=SpringDatabase
+
+server.port=9091
+
+Spring.datasource.hikari.dirver-class-name=oracle.jdbc.driver.OraclerDirver

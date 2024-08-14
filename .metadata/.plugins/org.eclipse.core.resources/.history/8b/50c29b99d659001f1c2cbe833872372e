@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>파일 업로드 해보기</title>
+</head>
+<body>
+	<h3>사진 열러개 업로드하기</h3>
+	
+	
+	<form action="./multisave" method="POST" enctype="multipart/form-data">
+		<table border="2">
+			<tr>
+				<th>파일 여러개 선택하기</th>
+				<td>
+					<input type="file" name="profileImageFile" mutiple/>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="submit" value="업로드하기" />
+				</td>
+			</tr>
+		</table>
+	</form>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<form action="./multisave" method="POST" enctype="multipart/form-data">
+		<table border="2">
+			<tr>
+				<th>파일 여러개 선택하기</th>
+				<td>
+					<input type="file" name="profileImageFile" mutiple/>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="submit" value="업로드하기" />
+				</td>
+			</tr>
+		</table>
+	</form>
+	
+	
+	
+</body>
+</html>

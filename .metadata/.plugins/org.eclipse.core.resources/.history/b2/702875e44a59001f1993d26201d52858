@@ -1,0 +1,16 @@
+package com.ezen.springdata.profile.repository;
+
+import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.stereotype.Repository;
+
+import com.ezen.springdata.profile.dto.ProfileImageDTO;
+
+@Repository
+public class ProfileRepository {
+
+	private final SqlSessionTemplate sql;
+	
+	public void saveProfileIamge(ProfileImageDTO profileImageDTO) {
+		sql.insert("profile.saveProfileImage", profileImageDTO);
+	}
+}

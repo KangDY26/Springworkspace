@@ -1,0 +1,15 @@
+package com.ezen.springmvc.stu;
+
+import lombok.Data;
+import lombok.NonNull;
+
+@Data
+public class Car {
+	
+	@NonNull
+	private String car_name;
+	@NonNull
+	private Integer car_price;
+	
+
+}

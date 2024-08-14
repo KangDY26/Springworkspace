@@ -1,0 +1,31 @@
+package com.ezen.springdat.hello;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+@Controller
+public class HelloController {
+
+	@GetMapping("/hello")
+	public String hello() {
+		
+		return "hello/hello";
+	}
+	
+	@PostMapping("/hello")
+	public String hi() {
+		String get = "안녕하세요";
+		
+		log.info("hi{}", get);
+		
+		
+		
+		return "redirect:/hello";
+		
+	}
+}

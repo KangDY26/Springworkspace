@@ -1,0 +1,5 @@
+package com.ezen.springdata.fruit.controller;
+
+public class FruitOrderController {
+
+}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>파일 업로드 해보기</title>
+</head>
+<body>
+
+	<h3>사진 업로드 하기</h3>
+	
+	<form action="./save" method="POST" enctype="multipart/form-data">
+	
+	</form>
+
+</body>
+</html>

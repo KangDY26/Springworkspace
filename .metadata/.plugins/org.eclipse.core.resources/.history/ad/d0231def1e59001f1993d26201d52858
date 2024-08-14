@@ -1,0 +1,51 @@
+package com.ezen.springdata.controller;
+
+import java.util.Enumeration;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.SessionAttribute;
+
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+@Controller
+public class SessionTestController {
+
+	@GetMapping("/session/test1")
+	public String test1(
+				HttpServletRequest request,
+				HttpSession session
+			) {
+		log.info("1번 방식으로 꺼낸 세션: {}", request.getSession());
+		log.info("2번 방식으로 꺼낸 세션: {}", session);
+		
+		session.setAttribute("nickname", "아이스아메리카노");
+		
+		return "/session/index";
+	}
+	
+	@GetMapping("/session/test2")
+	public String test2(
+			@SessionAttribute("nickname") String nickname,
+			@SessionAttribute(name ="point", required = false) Integer point) {		
+		log.info("@SessionAttribute로 꺼낸 nickname: {}", nickname);
+		log.info("@SessionAttribute로 꺼낸 point: {}", point);
+
+		return "/session/index";
+		
+	}
+	
+	public String test3(HttpSession session) {
+		
+		// scope.getAttributeNames()
+		// : 모든 어트리뷰트의 이름을 하니씩 꺼낼 수 있는 객체를 반환
+		
+		Enumeration<String> attrs = session.getAttributeNames();
+		
+		return "/session/index";
+	}
+
+}

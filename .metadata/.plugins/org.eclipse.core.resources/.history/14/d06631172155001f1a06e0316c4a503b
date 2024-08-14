@@ -1,0 +1,9 @@
+spring.application.name=SpringDatabase
+
+server.port=9091
+
+Spring.datasource.hikari.dirver-class-name=oracle.jdbc.driver.OraclerDirver
+Spring.datasource.hikari.url=jdbc:oracle:thin:@127.0.0.1:1521:ex
+spring.datasource.hikari.username=hr
+spring.datasource.hikari.password=1234
+spring.datasource.hikari.

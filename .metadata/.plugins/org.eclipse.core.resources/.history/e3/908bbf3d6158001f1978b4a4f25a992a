@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ko" xmlns:th="https://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>과일 발주 목록</title>
+	<link rel="stylesheet" th:href="@{/fruitOrder/css/list.css}" />
+</head>
+<body>
+	<h3>과일 발주 목록</h3>
+	
+	<div id="fruit-order-list" th:each="fruitOrder: ${fruitOrders}">
+		<div>[[${fruitOrder.fid}]]</div>
+		<div>[[${fruitOrder.fname}]]</div>
+		<div>[[${fruitOrder.price}]]</div>
+		<div>[[${fruitOrder.qty}]]</div>
+		<div>[[${fruitOrder.exp_date}]]</div>
+		<div>[[${fruitOrder.location_id}]]</div>
+		<div><button class="sale-btn"
+		th:data-fid="${fruitOrder.fid}"
+		th:data-fruit-price="${fruitOrder.price}"
+		th:data-remain-qty="${fruitOrder.qty}"
+		>판매!</button></div>
+	</div>
+	
+	<script th:src="@{/fruitOrder/js/list.js}"></script>
+	
+</body>
+</html>

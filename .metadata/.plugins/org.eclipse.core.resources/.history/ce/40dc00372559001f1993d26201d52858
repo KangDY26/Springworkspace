@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>쿠키 테스트 페이지</title>
+</head>
+<body>
+
+	<h3>쿠키</h3>
+
+</body>
+</html>

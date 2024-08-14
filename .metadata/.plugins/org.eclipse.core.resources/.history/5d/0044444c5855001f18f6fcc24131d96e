@@ -1,0 +1,15 @@
+package com.ezen.springdata.dto;
+
+import java.util.Date;
+
+import lombok.Data;
+
+@Data
+public class FruitDTO {
+	
+	String fname;
+	Integer price;
+	Integer qty;
+	Date exp_date;
+	
+}

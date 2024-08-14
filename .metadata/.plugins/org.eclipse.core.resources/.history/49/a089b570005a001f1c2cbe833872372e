@@ -1,0 +1,6 @@
+package com.ezen.springdata.service;
+
+@Service
+public class FruitService {
+
+}

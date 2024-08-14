@@ -1,0 +1,22 @@
+package com.ezen.springdata.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import jakarta.servlet.http.HttpServletRequest;
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+@Controller
+public class SessionTestController {
+
+	@GetMapping("/session/test1")
+	public String test1(
+				HttpServletRequest request
+				HttpSession session
+			) {
+		log.info("1번 방식으로 꺼낸 세션: {}", request.getSession());
+		
+		return "/session/index";
+	}
+}

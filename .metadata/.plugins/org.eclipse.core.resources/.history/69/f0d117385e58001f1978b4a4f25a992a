@@ -1,0 +1,11 @@
+
+const saleButtonHandler = (e) => {
+	console.dir(e);
+	console.dir(e.target);
+};
+
+
+Array.from(document.getElementsByClassName("sale-btn"))
+	.forEach((saleButten) => {
+		saleButten.addEventListener("click", saleButtensaleButtonHandler)
+	});

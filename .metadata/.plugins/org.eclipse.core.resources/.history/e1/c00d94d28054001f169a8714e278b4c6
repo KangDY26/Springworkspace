@@ -1,0 +1,16 @@
+package com.ezen.springmvc.cook;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import lombok.Data;
+
+@Component
+@Data
+public class LombokCook {
+
+	@Autowired
+	private Hotel hotel;
+	@Autowired
+	private Recipe recipe; 
+}

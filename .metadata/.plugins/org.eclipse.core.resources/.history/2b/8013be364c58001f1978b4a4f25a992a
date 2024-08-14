@@ -1,0 +1,18 @@
+package com.ezen.springdata.fruit.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+@Controller
+public class FruitOrderController {
+
+	@GetMapping("/fruitorder/list")
+	public String list() {
+		
+		
+		return "fruitorder/list";
+	}
+}

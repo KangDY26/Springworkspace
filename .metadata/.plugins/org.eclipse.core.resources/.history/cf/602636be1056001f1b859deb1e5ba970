@@ -1,0 +1,25 @@
+package com.ezen.springdata.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.ezen.springdata.dto.FruitDTO;
+
+
+@RequestMapping("/thymeleaf")
+@Controller
+public class ThymeleafTestController {
+
+	@GetMapping("/form")
+	public String form(Model model) {
+		FruitDTO fruit = new FruitDTO();
+		
+			model.addAttribute("fruit", fruit);
+			
+			return "th/form";
+		
+	}
+	
+}

@@ -1,0 +1,60 @@
+04_Lombok.txt
+
+# Lombok
+
+	- 간단하게 어노테이션만 추가하면 자바빈 객체를 자동으로 완성해주는 라이브러리
+	- 데이터 클래스(dto)를 아주 편리하게 생성 할 수 있다
+	
+# Lombok 설치
+	
+	1. 구글에서 검색 및 다운로드
+	2. 실행 후 IDE 선택 및 적용
+	3. pom.xml에 의존성 등록
+	4. IDE 재시작
+	
+# Lombok 어노테이션들
+
+  @Getter
+		
+	- 클래스 위에 @Getter를 붙이면 해당 클래스의 모든 필드에 대한 Getter를 자동으로 생성해준다
+	- 특정 필드위에 붙이면 해당 필드의 Getter가 생성한다
+	
+  @Setter
+		
+	- 클래스 위에 @Setter를 붙이면 해당 클래스의 모든 필드에 대한 Setter를 자동으로 생성해준다
+	- 특정 필드위에 붙이면 해당 필드의 Setter가 생성한다
+	
+  @ToString
+  	
+  	- 클래스 위에 @ToString을 붙이면 해당 클래스의 toString()을 자동 생성해준다 
+  	
+  @NoArgsConstructor
+  
+  	- 기본 생성자 자동으로 생성
+  	
+  @RequiredArgsConstructor
+  
+  	- 필수로 채워야하는 필드가 포함된 생성자를 자동으로 생성
+  	- 롬복은 @NonNull이 위에 붙어있는 필드를 반드시 채워야하는 필드로 생각하낟
+  	
+  @AllArgsConsturcor
+  
+    - 모든 필드가 포함된 생성자를 자동으로 생성
+    
+  @EqualsAndHashCode
+  
+  	- 해당 클래스의 equals()와 ahshCode()를 생성
+  	- equals()는 모든 필드의 값이 일치하면 같은 것으로 판정
+  	- hashCode()는 모든 필드의 값이 같다면 항상 같은 값을 얻어낼 수 있음
+  	
+  @Date
+  
+  	@Getter
+  	@Setter
+  	@ToString
+  	@EqualsAndHashCode
+  	@RequiredArgsConstructor를 하나로 합친 어노테이션
+  	
+  	
+  	
+	

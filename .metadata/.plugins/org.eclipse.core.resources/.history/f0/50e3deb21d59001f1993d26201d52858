@@ -1,0 +1,17 @@
+06_세션.txt
+
+# 스프링 부트에서 세션 사용하는 방법
+
+	1. JSP에서처럼 HttpServletRequest에서 꺼낸다
+	2. 그냥 HttpSession 객체를 적어놓으면 알아서 바인딩 된다
+	
+# JSP보다 세션에서 어트리뷰트 값을 꺼내기 수월해짐 
+
+	@GetMapping("/session/test2")
+	public String test2(@SessionAttribute("nickname") String nickname) {
+		log.info("@SessionAttribute로 꺼낸 nickname: {}", nickname);
+		return "/session/index";
+		
+	}
+	
+	@Session

@@ -1,0 +1,29 @@
+package com.ezen.springdata.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+@Controller
+public class RedirectTestController {
+
+	@GetMapping(value = {"/redirect/", "/redirect/home"})
+	public String home() {
+		return "/redirect/home";
+	}
+	
+	@GetMapping(value = {"/redirect"})
+	public String home2() {
+		log.info("홈2에 도착했다가 홈으로 갑니다");
+		return "redirect:redirect/";
+	}
+	
+	
+	@GetMapping("/redirect/test1")
+	public String test1() {
+		log.info("테스트1에 도착했다 홈으로 갑니다");
+		return "redirect:redirect/";
+	}
+}

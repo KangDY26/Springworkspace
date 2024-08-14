@@ -1,0 +1,21 @@
+package com.ezen.springmvc.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.ezen.springmvc.stu.Car;
+
+@Controller
+public class CarController {
+
+	
+	Car car;
+	
+	@GetMapping("/stude")
+	public String stude() {
+		System.out.println("car");
+		
+		return null;
+	}
+	
+}

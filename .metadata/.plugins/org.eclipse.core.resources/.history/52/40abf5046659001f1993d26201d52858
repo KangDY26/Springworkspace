@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>hello</title>
+</head>
+<body>
+
+	<h3>테스트 페이지</h3>
+	
+	<form action="">
+		<input type="text" name="hello" value="아무거나"/>
+		<input type="submit" value="눌러" />
+	</form>
+
+
+</body>
+</html>

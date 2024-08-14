@@ -1,0 +1,15 @@
+
+const btn = document.getElementById("btn");
+const out = document.getElementById("out");
+
+btn.addEventListener("click", (e) => {
+	const xhttp = new XMLHttpRequest();
+	
+	xhttp.open("GET", "/rest/v1"); // 요청 보낼 메서드 및 메서드 설정
+	xhttp.addEventListener("readystatechange", (e) => {
+		console.log(e);
+	}); // 서버로 부터 ajax 요청에 대한 응답을 받을때마다 발생하는 이벤트 설정 
+	xhttp.send();
+	
+	out.innerText ="바뀜";
+});

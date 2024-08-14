@@ -1,0 +1,83 @@
+package com.ezen.springdata.controller;
+
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+
+import com.ezen.springdata.dto.FruitDTO;
+import com.ezen.springdata.mapper.FruitsRepository;
+
+
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+
+
+
+
+@Slf4j
+@RequestMapping("/fruit")
+@RequiredArgsConstructor
+@Controller
+public class FruitsTestController {
+	
+	private final FruitsRepository fruitsRepository;
+	
+	// @Slf4j 어노테이션으로 자동 생성 가능
+	//private final static Logger log = LoggerFactory.getLogger(FruitsTestController.class);
+	
+	@GetMapping("/add")
+	public String addFruitForm() {
+		return "fruit/add_form";
+	}
+	
+	@PostMapping("/add1")
+	public String addFruit(FruitDTO fruit) {
+		log.info("{}", fruit);
+		
+		log.info("insert 결과 : {}", fruitsRepository.add2(fruit));
+		
+		return "redirect:/fruit/add";
+	}
+	
+	// 과일 목록 보기, 과일 삭제하기, 과일 정보 수정하기
+	@GetMapping("/list")
+	public String fruitList(Model model) {
+		
+		model.addAttribute("fruitList", fruitsRepository.getAll());
+		return "fruit/list";
+	}
+	
+	@GetMapping("/del")
+	public String delFruitForm() {
+		return "fruit/del_form";
+	}
+	
+	@PostMapping("/del")
+	public String delFruit(FruitDTO fruit){
+		
+		log.info("{}", fruitsRepository.del(fruit));
+		
+		return "redirect:/fruit/list";
+	}
+	
+	
+	@GetMapping("/update")
+	public String updateFruitForm() {
+		return "fruit/upd_form";
+	}
+	
+	@PostMapping("/update")
+	public String updateFruit(FruitDTO fruit) {
+		
+		log.info("{}", fruitsRepository.update(fruit));
+		
+		return "redirect:/fruit/list";
+	}
+	
+	
+}

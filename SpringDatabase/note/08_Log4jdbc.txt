@@ -1,0 +1,55 @@
+08_Log4jdbc.txt
+
+# Log4jdbc
+
+	- jdbc에서 발생하는 일들을 로그에 추가해주는 라이브러리
+	- jdbc와 관련된 내용들을 디버깅 할 때 매우 유용하다
+	
+# 설정 하기
+
+	- application.properties
+	
+	spring.datasource.driver-class-name=oracle.jdbc.driver.OracleDriver
+	spring.datasource.url=jdbc:oracle:thin:@localhost:1521:XE
+	
+	를 아래와 같이 변경
+	
+	spring.datasource.driver-class-name=net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+	spring.datasource.url=jdbc:log4jdbc:oracle:thin:@localhost:1521:XE
+	
+	- src/main/resources에  log4jdbc.log4j2.properties를 추가
+	
+	log4jdbc.spylogdelegator.name=net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator
+	
+	
+	
+	
+# 확인 할 수 있는 jdbc 로그의 종류
+	
+	- jdbc.sqlonly : 쿼리문 확인하는 로거
+					 Logs only SQL. SQL executed within a prepared statement is automatically shown with it's bind arguments replaced with the data bound at that position, for greatly increased readability.
+	
+	
+	- jdbc.sqltiming : SQL 실행하는데 걸린 시간을 체크 할 수 있는 로거
+					   Logs the SQL, post-execution, including timing statistics on how long the SQL took to execute.
+	
+	- jdbc.audit : 모든 JDBC 관련 로그를 출력하는 로거
+				   Logs ALL JDBC calls except for ResultSets. This is a very voluminous output, and is not normally needed unless tracking down a specific JDBC problem.
+	
+	- jdbc.resultset : ResultSet과 관련된 모든 내용을 출력하는 로거
+					   Even more voluminous, because all calls to ResultSet objects are logged.
+	
+	- jdbc.resultsettable : 실행 결과로 얻어낸 ResultSet을 테이블 형태로 출력하는 로거
+							Log the jdbc results as a table. Level debug will fill in unread values in the result set.
+	
+	- jdbc.connection : 연결과 관련된 내용을 출력하는 로거
+						connection open and close events as well as dumping all open connection numbers. This is very useful for hunting down connection leak problems.
+
+# 사용 예시
+
+	<logger name="jdbc.resultset" level="OFF" />
+	<logger name="jdbc.audit" level="OFF" />
+	<logger name="jdbc.connection" level="OFF" />
+	<logger name="jdbc.sqltiming" level="INFO" />
+	<logger name="jdbc.resultsettable" level="INFO" />						
+						

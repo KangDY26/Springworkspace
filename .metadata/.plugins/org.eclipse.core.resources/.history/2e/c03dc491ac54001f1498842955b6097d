@@ -1,0 +1,30 @@
+package com.ezen.springmvc.stu;
+
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
+public class Car {
+	
+	private String car_name;
+	private Integer car_price;
+	
+	public String getCar_name() {
+		return car_name;
+	}
+	public void setCar_name(String car_name) {
+		this.car_name = car_name;
+	}
+	public Integer getCar_price() {
+		return car_price;
+	}
+	public void setCar_price(Integer car_price) {
+		this.car_price = car_price;
+	}
+	
+	@Override
+	public String toString() {
+		return "Car [car_name=" + car_name + ", car_price=" + car_price + "]";
+	}
+	
+	
+}

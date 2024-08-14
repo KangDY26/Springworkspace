@@ -1,0 +1,13 @@
+package com.ezen.springmvc.controller;
+
+import com.ezen.springmvc.stu.Car;
+
+public class CarController {
+	
+	
+	Car car;
+
+	public String study() {
+		return null;
+	}
+}

@@ -1,0 +1,5 @@
+package com.ezen.springmvc.dto;
+
+public class Cook2 extends Cook{
+
+}

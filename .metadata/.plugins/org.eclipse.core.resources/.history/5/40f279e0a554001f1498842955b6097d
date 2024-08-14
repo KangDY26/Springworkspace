@@ -1,0 +1,10 @@
+package com.ezen.springmvc.stu;
+
+import lombok.Data;
+
+@Data
+public class Car {
+
+	private String car_name;
+	private Integer car_price;
+}

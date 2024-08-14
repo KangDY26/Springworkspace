@@ -1,0 +1,18 @@
+1723082983191	Rename package 'com.ezen.springdat.repository'
+1723083811688	Rename package 'com.ezen.springdat.Controller'
+1723084087475	Rename type 'EmployeeMapper'
+1723085715107	Rename package 'com.ezen.springdat'
+1723086037300	Rename package 'com.ezen.springdat.dto'
+1723091169097	Rename package 'com.ezen.springdat.controller'
+1723091345914	Rename package 'com.ezen.springdat.mapper'
+1723092091299	Rename type 'EmployeesMapper'
+1723094294321	Rename resource 'data.html'
+1723094327374	Rename resource 'datil.html'
+1723097305279	Rename resource 'detil.html'
+1723169027778	Rename resource 'fruit.html'
+1723169031782	Move file
+1723175038883	Rename resource 'add_fruit.html'
+1723175085717	Rename resource 'list.hmtl'
+1723196459134	Rename resource 'fruit-mapper.xml'
+1723196526122	Rename resource 'fruit'
+1723196555885	Delete element

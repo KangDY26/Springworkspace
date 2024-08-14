@@ -1,0 +1,34 @@
+01_Mybatis.txt
+
+# Mybatis
+
+	- DB와 연결하는데 필요한 모든 jdbc 코드를 자동으로 생성해주는 프레임워크
+	- XML 파일만 작성해 두면 필요한 코드는 모두 자동으로 생성한다
+	
+# Mybatis 설정하기
+
+  - application.properties
+	
+	+ datasource 설정 (기본적으로 hikariCP를 사용함)
+		spring.datasource.driver-class-name=oracle.jdbc.driver.OracleDriver
+		spring.datasource.url=jdbc:oracle:thin:@localhost:1521:XE
+		spring.datasource.username=hr
+		spring.datasource.password=1234
+		
+	+ hikari에 관련된 설정
+	
+	spring.datasource.hikari.maximum-pool-size=20
+	spring.datasource.hikari.minimum-idle=5
+	spring.datasource.hikari.idle-timeout=90000
+	... 등등
+	
+	+ mybatis 설정 파일 위치 정의
+	
+	mybatis.config-location=classpath:mybatis-config.xml
+	mybatis.mapper-locations=classpath:mapper/*.xml
+	
+  - src/main/resources/classpath:mybatis-config.xml
+	
+	
+	
+	

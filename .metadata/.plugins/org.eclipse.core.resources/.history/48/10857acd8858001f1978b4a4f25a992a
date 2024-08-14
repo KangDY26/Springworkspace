@@ -1,0 +1,8 @@
+package com.ezen.springdata.dto;
+
+public class FruitSalesHistoryDTO {
+	private Integer fhid;
+	private Integer fid;
+	private Integer qty;
+	private Date purchase_time;
+}

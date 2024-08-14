@@ -1,0 +1,13 @@
+package com.ezen.springmvc.cook;
+
+import org.springframework.stereotype.Component;
+
+import lombok.Data;
+
+@Component
+@Data
+public class LombokCook {
+
+	private Hotel hotel;
+	private Recipe recipe; 
+}

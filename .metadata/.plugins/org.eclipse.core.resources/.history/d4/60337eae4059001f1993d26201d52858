@@ -1,0 +1,11 @@
+package com.ezen.springdata.dto;
+
+import lombok.Data;
+
+@Data
+public class ProfileImageDTO {
+
+	private Integer id;
+	private String originalFilename;
+	private String storedFilename;
+}

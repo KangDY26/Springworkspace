@@ -1,0 +1,11 @@
+package com.ezen.springmvc.dto;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Recipe {
+
+	String food_name;
+	String[] gradients;
+	String[] cooking_process;
+}

@@ -1,0 +1,19 @@
+package com.ezen.springdata.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class RedirectTestController {
+
+	@GetMapping(value = {"/redirect/", "/redirect/home"})
+	public String home() {
+		return "";
+	}
+	
+	
+	@GetMapping("/redirect/test1")
+	public String test1() {
+		return "";
+	}
+}

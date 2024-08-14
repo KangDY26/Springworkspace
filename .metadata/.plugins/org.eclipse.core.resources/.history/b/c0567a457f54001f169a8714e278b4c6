@@ -1,0 +1,8 @@
+package com.ezen.springmvc.dto;
+
+public class Recipe {
+
+	String food_name;
+	String[] gradients;
+	String[] cooking_process;
+}

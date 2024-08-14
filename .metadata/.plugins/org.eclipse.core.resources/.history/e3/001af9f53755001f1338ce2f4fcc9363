@@ -1,0 +1,16 @@
+01_Mybatis.txt
+
+# Mybatis
+
+	- DB와 연결하는데 필요한 모든 jdbc 코드를 자동으로 생성해주는 프레임워크
+	- XML 파일만 작성해 두면 필요한 코드는 모두 자동으로 생성한다
+	
+# Mybatis 설정하기
+
+	- application.properties
+	
+	+ datasource 설정
+		spring.datasource.driver-class-name=oracle.jdbc.driver.OracleDriver
+		spring.datasource.url=jdbc:oracle:thin:@localhost:1521:XE
+		spring.datasource.username=hr
+		spring.datasource.password=1234

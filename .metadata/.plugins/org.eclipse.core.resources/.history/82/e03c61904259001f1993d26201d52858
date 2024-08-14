@@ -1,0 +1,27 @@
+package com.ezen.springdata.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.ezen.springdata.dto.ProfileImageDTO;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+@Controller
+public class ProfileController {
+
+	@GetMapping("/profile/image/upload")
+	public String profileImageUploadPage() {
+		return "/profile/upload_image";
+	}
+	
+	
+	@POSTMapping("/profile/image/save")
+	public String profileImageSave(
+			ProfileImageDTO profileImageDTO) {
+		log.info("ProfileImageDTO= {}", profileImageDTO);
+		
+		return "redirect:/profile/upload_image/upload";
+	}
+}

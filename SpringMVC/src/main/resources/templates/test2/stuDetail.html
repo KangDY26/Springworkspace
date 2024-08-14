@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>학생 정보 페이지</title>
+</head>
+<body>
+	
+	<h3>디테일</h3>
+	
+	<p th:text="${stu}"></p>
+	<div th:text="'이름: ' + ${stu.stu_name}"></div>
+	<div th:text="'국어: ' + ${stu.kor}"></div>
+	<div th:text="'영어: ' + ${stu.eng}"></div>
+	<div th:text="'수학: ' + ${stu.math}"></div>
+	
+
+</body>
+</html>

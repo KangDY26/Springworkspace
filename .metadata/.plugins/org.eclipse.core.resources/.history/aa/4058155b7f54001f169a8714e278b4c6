@@ -1,0 +1,10 @@
+package com.ezen.springmvc.dto;
+
+import org.springframework.stereotype.Component;
+
+import lombok.Data;
+
+@Data
+public class Cook2 extends Cook{
+
+}

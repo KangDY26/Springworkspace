@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="Fruits">
+	<insert id="add" parameterType="fruit">
+		INSERT INTO
+			fruits (fid, fname, price, qty, exp_date)
+		VALUES
+	<if test="exp_date != null">
+			(fruit_fid_seq.nextval, #{fname}, #{price}, #{qty}, #{exp_date})
+	</if>
+	<if test="exp_date == null">
+			(fruit_fid_seq.nextval, #{fname}, #{price}, #{qty}, sysdate + 7)
+	</if>
+	</insert>
+	<!-- insert 후 숫자 대신 키값을 알아내는 방식 -->
+	<insert id = "add2" parameterType="fruit">
+		<!-- insert문에 selectKey를 사용하면 insert 성공 여부 대신 키값이 추가된 dto를 반환한다 -->
+		<selectKey keyProperty="fid" resultType="Integer" order="BEFORE">
+			SELECT fruit_fid_seq.nextval FROM dual
+		</selectKey>
+		INSERT INTO
+				fruits (fid, fname, price, qty, exp_date)
+			VALUES
+		<if test="exp_date != null">
+			(#{fid}, #{fname}, #{price}, #{qty}, #{exp_date})
+		</if>
+		<if test="exp_date == null">
+			(#{fid}, #{fname}, #{price}, #{qty}, sysdate + 7)
+		</if>
+	</insert>
+	
+</mapper>

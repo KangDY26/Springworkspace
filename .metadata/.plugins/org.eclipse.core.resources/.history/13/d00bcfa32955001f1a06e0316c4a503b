@@ -1,0 +1,5 @@
+package com.ezen.springdat.dto;
+
+public class EmployeeDTO {
+
+}

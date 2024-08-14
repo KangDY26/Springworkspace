@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>세션 테스트 홈</title>
+</head>
+<body>
+	
+</body>
+</html>

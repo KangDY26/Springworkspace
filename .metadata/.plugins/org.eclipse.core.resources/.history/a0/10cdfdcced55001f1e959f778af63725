@@ -1,0 +1,28 @@
+package com.ezen.springdata.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import lombok.RequiredArgsConstructor;
+
+@RequestMapping("/fruit")
+@RequiredArgsConstructor
+@Controller
+public class FruitsTestController {
+
+	private final FruitsRepository fruitsRepository;
+	
+	@GetMapping("/add")
+	public String addFruitForm() {
+		return "fruit/add";
+	}
+	
+	@PostMapping("/add")
+	public String addFruit() {
+		return "redirect:fruit/add";
+	}
+	
+	
+}

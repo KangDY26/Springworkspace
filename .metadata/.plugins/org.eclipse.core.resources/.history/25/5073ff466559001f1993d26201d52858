@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>hello</title>
+</head>
+<body>
+
+	<h3>테스트 페이지</h3>
+	
+	<form action="">
+		<input type="text"/>
+		<input type="submit" value="눌러" />
+	</form>
+	<form action="">
+		<input type="text" value="뭐라도적어놓음" />
+		<input type="text" value="butten" />
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+
+const getRandomFruitSaleCount =
+ remainQty => Math.floor(Math.random() * remainQty) + 1;
+
+const saleButtonHandler = (e) => {
+	const clickedButton = e.target;
+
+	console.log(`판매 해야하는 과일ID: ${clickedButton.dataset.fid}`);
+	console.log(`현재 남은 개수: ${clickedButton.dataset.remainQty}`);
+	console.log(`랜덤으로 결정된 판매 개수: ${getRandomFruitSaleCount(remainQty)}`);
+
+};
+
+
+Array.from(document.getElementsByClassName("sale-btn"))
+	.forEach((saleButten) => {
+		saleButten.addEventListener("click", saleButtensaleButtonHandler)
+	});

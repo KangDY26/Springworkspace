@@ -1,0 +1,9 @@
+INDEX VERSION 1.134+C:\aiautomation_kdy\Springworkspace\.metadata\.plugins\org.eclipse.jdt.core
+2274873408.index
+3100723525.index
+145002494.index
+3026164700.index
+186471443.index
+3168929946.index
+69505341.index
+1865797976.index

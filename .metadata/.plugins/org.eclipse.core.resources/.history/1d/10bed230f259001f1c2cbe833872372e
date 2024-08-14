@@ -1,0 +1,21 @@
+package com.ezen.springdat.controller;
+
+import org.springframework.http.HttpStatusCode;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@RequestMapping("/entity")
+@Controller
+public class ResponseEntityTestController {
+
+	// 응답하는 ResponseEntity의 제네릭은 응답 내용(body)에 들어가는 데이터 타입을 의미한다
+	@GetMapping("/test1")
+	public ResponseEntity<String> test1(){
+		ResponseEntity<String> entity = new ResponseEntity(HttpStatusCode.valueOf(200));
+		
+		return null;
+	}
+	
+}

@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="en" xmlns="http://tyhmeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title th:text=${emp:></title>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,30 @@
+package com.ezen.springdata.repository;
+
+import java.util.List;
+
+import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.stereotype.Repository;
+
+import com.ezen.springdata.dto.FruitDTO;
+
+import lombok.RequiredArgsConstructor;
+
+@Repository
+@RequiredArgsConstructor
+public class FruitRepository {
+	private final SqlSessionTemplate sql;
+	
+	public List<FruitDTO> getAll(){
+		return sql.selectList("Fruits.getAll");
+	}
+}
+
+/*
+  	@RequiredArgsConstructor : 인스턴스 자동 생성
+ 
+	1. 홈페이지 접속
+	2. Controller 호출됨 @Controller 어노테이션
+	3. Serivce 호출됨 @Service 어노테이션
+	4. Repository 호출됨 @Repository 어노테이션
+	5. mapper에 등록된 쿼리문 호출됨
+*/

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+ "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<!-- Window > Preference > Maven > download artifact javadoc > tick -->
+<configuration>
+	<typeAliases>
+		<typeAlias type="com.ezen.springdata.dto.EmployeeDTO" alias="emp"/>
+		<typeAlias type="com.ezen.springdata.dto.EmpDeptDTO" alias="emp_dept"/>
+		<typeAlias type="com.ezen.springdata.dto.FruitDTO" alias="fruit"/>
+		<typeAlias type="com.ezen.springdata.profile.dto.ProfileImageDTO" alias="profileImage" />
+	</typeAliases>	
+</configuration>

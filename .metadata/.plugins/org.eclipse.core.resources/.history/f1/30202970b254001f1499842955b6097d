@@ -1,0 +1,15 @@
+package com.ezen.springmvc.stu;
+
+import org.springframework.stereotype.Component;
+
+import lombok.Data;
+
+@Component
+@Data
+public class Car {
+	
+	private final String car_name;
+	private final Integer car_price;
+	
+
+}

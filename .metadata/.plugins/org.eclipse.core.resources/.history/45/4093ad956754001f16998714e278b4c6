@@ -1,0 +1,22 @@
+package com.ezen.springmvc.dto;
+
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@RequiredArgsConstructor
+@NoArgsConstructor
+@ToString
+@Setter
+@Getter
+public class CoffeeDTO {
+	@NonNull
+	private String coffee_kor_name;
+	@NonNull
+	private String coffee_eng_name;
+	
+	private Integer coffee_price;
+}

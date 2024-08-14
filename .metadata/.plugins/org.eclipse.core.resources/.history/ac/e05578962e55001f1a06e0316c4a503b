@@ -1,0 +1,22 @@
+package com.ezen.springdat.mapper;
+
+import java.util.List;
+
+import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.stereotype.Repository;
+
+import com.ezen.springdat.dto.EmployeeDTO;
+
+import lombok.RequiredArgsConstructor;
+
+@RequiredArgsConstructor
+@Repository
+public class EmployeesMapper {
+
+	private final SqlSessionTemplate sql;
+	
+	// seletList("namespace.id") : 여러 줄 select를 하는 쿼리문에 사용한다
+	public List<EmployeeDTO> getAll() {
+		return sql.selectList("Employee.getAll");
+	}
+}

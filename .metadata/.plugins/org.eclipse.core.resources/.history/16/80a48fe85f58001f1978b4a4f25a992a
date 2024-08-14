@@ -1,0 +1,14 @@
+
+const saleButtonHandler = (e) => {
+	const clickedButton = e.target;
+
+	console.log(`판매 해야하는 과일ID: ${clickedButton.dataset.fid}`);
+	console.log(`그 과일의 가격: ${clickedButton.dataset.fruitPrice}`);	
+
+};
+
+
+Array.from(document.getElementsByClassName("sale-btn"))
+	.forEach((saleButten) => {
+		saleButten.addEventListener("click", saleButtensaleButtonHandler)
+	});

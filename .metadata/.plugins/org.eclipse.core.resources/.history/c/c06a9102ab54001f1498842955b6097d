@@ -1,0 +1,15 @@
+package com.ezen.springmvc.stu;
+
+public class Study {
+	public static void main(String[] args) {
+		
+		Car car = new Car();
+		
+		car.setCar_name("모닝");
+		car.setCar_price(1000);
+		
+		System.out.println("여기에 자동차 이름이랑 자동차 가격을 출력해보세요");
+		System.out.println("자동차의 이름: " + car.getCar_name());
+	}
+
+}

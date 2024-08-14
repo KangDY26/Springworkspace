@@ -1,0 +1,15 @@
+package com.ezen.springdata.fruit.repository;
+
+import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.stereotype.Repository;
+
+import lombok.RequiredArgsConstructor;
+
+@RequiredArgsConstructor
+@Repository
+public class FruitOrderRepository {
+
+	private SqlSessionTemplate sql() {
+		return sql.selectList("Fruits.getAll");
+	}
+}

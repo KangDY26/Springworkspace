@@ -1,0 +1,10 @@
+01_Mybatis.txt
+
+# Mybatis
+
+	- DB와 연결하는데 필요한 모든 jdbc 코드를 자동으로 생성해주는 프레임워크
+	- XML 파일만 작성해 두면 필요한 코드는 모두 자동으로 생성한다
+	
+# application.properties에서 설정하기
+
+	- 

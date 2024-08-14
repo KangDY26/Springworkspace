@@ -1,0 +1,17 @@
+package com.ezen.springdata.mapper;
+
+import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.stereotype.Repository;
+
+import lombok.RequiredArgsConstructor;
+
+@RequiredArgsConstructor
+@Repository
+public class FruitRepository {
+
+	private final SqlSessionTemplate sql;
+	
+	public boolean (FruitDTO fruitDTO) {
+		return
+	}
+}

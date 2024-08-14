@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>학생 정보 등록</title>
+</head>
+<body>
+	
+	<form action="./stu" method="POST">
+		<input type="text" name="stu_name" value="김민수" /><br>
+		<input type="number" name="kor" value="90" /><br>
+		<input type="number" name="eng" value="88"/><br>
+		<input type="number" name="math" value="75"/><br>
+		<input type="submit" value="등록" />
+	</form>
+	
+	<hr>
+	
+	<!-- form은 get과 post만 보낼수 있다-->
+	<form action="./stu2" method="POST">
+		<input type="text" name="stu_name" value="임꺽정" /><br>
+		<input type="number" name="kor" value="33" /><br>
+		<input type="number" name="eng" value="44"/><br>
+		<input type="number" name="math" value="55"/><br>
+		<input type="submit" value="등록" />
+	</form>
+</body>
+</html>

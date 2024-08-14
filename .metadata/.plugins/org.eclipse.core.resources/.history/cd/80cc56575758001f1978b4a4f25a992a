@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+
+
+#fruit-order-list {
+	display: grid;
+	/* grid-template-colums: repeat(6, 1fr); */
+	grid-template-colums: rep
+}

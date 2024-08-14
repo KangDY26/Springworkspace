@@ -1,0 +1,87 @@
+01_Mybatis 설정하기.txt
+
+# Mybatis
+ - DB와 연결하는데 필요한 모든 jdbc 코드를 자동으로 생성해주는 프레임워크
+ - XML 파일만 작성해두면 필요한 코드는 모두 자동으로 생성한다
+ 
+ # Mybatis 설정하기
+ - application.properties
+  	+ datasource 설정 (기본적으로 hikariCP를 사용함)
+ 	
+ 	  spring.datasource.dbcp2.driver-class-name=oracle.jdbc.driver.OracleDriver
+	  spring.datasource.url=jdbc:oracle:thin:@127.0.0.1:1521:xe
+	  spring.datasource.username=hr
+	  spring.datasource.password=1234
+	  
+    + hikari에 관련된 설정
+  	  spring.datasource.hikari.maximum-pool-size=20
+	  spring.datasource.hikari.minimum-idle=5
+	  spring.datasource.hikari.idle-timeout=900000
+	  ... 등등
+ 	 
+   + mybatis 설정 파일 위치 정의
+  
+     mybatis.config-location=classpath:mybatis-config.xml
+	 mybatis.mapper-locations=classpath:mapper/**/*.xml
+	 
+ - classpath:(src/main/resources/mybatis-config.xml)  mybatis-config.xml
+  	* 설정 예시
+ 	
+ 	<typeAliases>
+		<typeAlias type="com.ezen.springdata.dto.EmployeeDTO" alias="emp"/>
+	</typeAliases>
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="${driver}" />
+				<property name="url" value="${url}" />
+				<property name="username" value="${username}" />
+				<property name="password" value="${password}" />
+			</dataSource>
+		</environment>
+	</environments>
+	
+ - classpath:(src/main/resources/mapper.xml)  mapper.xml
+ 
+ 
+	# 설정 예시
+
+	<?xml version="1.0" encoding="UTF-8" ?>
+	<!DOCTYPE mapper
+  	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  	"https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	<mapper namespace="Employees">
+		<select id="getAll" resultType="com.ezen.springdb.dto.EmployeeDTO">
+		SELECT
+			employee_id,first_name,last_name,email,phone_number,
+			hire_date,job_id,salary,commission_pct,manager_id,
+			department_id
+		FROM
+			employees2
+		</select>
+	</mapper>
+	
+# Mybatis Mapper 사용하기
+
+	- 마이바티스는 메퍼에 등록된 쿼리문과 추가 정보들을 통해
+	  개발자들에게 필요한 jdbc 코드를 자동으로 생성해준다
+
+	<select> : 매퍼에 select 쿼리문을 등록해 놓을 수 있다
+			   한 줄만 조회되는 쿼리문은 selectOne() 메서드를 사용해 호출해야 하고
+			   다중 행이 조회되는 쿼리문은 selectList() 메서드를 사용해 호출해야 한다
+			   
+		+ resultType : select의 결과가 dto인 경우 dto의 페이지 경로를 적어놓는다
+					   마이바티스가 꺼낸 모든 내용은 dto에 자동으로 담겨있다
+		+ parameterType : select의 조건 등에 사용될 변수들이 어떤 타입의 데이터인지 적어놓는다
+		   
+	- <insert> : 매퍼에 insert 쿼리문을 등록해 놓을 때 사용한다
+		
+		+ <selectKey> : 방금 insert한 쿼리문이 DB로 부터 부여받은 키 값을 받아오기 위해 사용한다
+		
+	- <update> : 매퍼에 update 쿼리문을 등록해 놓을 떄 사용한다
+	
+	- <delete> : 매퍼에 delete
+ 	
+	
+	
